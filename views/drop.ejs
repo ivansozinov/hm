@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="dropzone/dropzone.js"></script>
+    <link rel="stylesheet" href="dropzone/basic.css">
+    <link rel="stylesheet" href="dropzone/dropzone.css">
+    <title>Drop</title>
+</head>
+<body class="dropzone">
+<div id="previews" class="dropzone-previews"></div>
+<button id="clickable">Click me to select files</button>
+<script>
+    new Dropzone(document.body, {
+        url: "/drop/file",
+        previewsContainer: "#previews",
+        clickable: "#clickable",
+        paramName: "file",
+        maxFilesize: 2,
+    });
+</script>
+</body>
+</html>
